@@ -1,0 +1,126 @@
+.about {
+  grid-template-columns: 3fr 2fr;
+
+  &__info {
+    padding: 15rem 10rem;
+    border-radius: 2rem 0 0 2rem;
+    color: var(--white);
+    background-color: var(--peach);
+    h3 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      max-width: 46rem;
+    }
+  }
+  &__img {
+    border-radius: 0 2rem 2rem 0;
+    overflow: hidden;
+  }
+}
+
+.about-features {
+  grid-template-columns: 2fr 3fr;
+
+  &__info {
+    padding: 15rem 10rem;
+    border-radius: 0 2rem 2rem 0;
+
+    color: var(--peach);
+    background-color: var(--very-light-peach);
+    h3 {
+      font-size: 4rem;
+    }
+    p {
+      color: var(--black);
+      font-size: 1.6rem;
+      line-height: 1.8;
+      max-width: 46rem;
+      font-weight: 300;
+    }
+  }
+
+  &__real-deal {
+    grid-template-columns: 3fr 2fr;
+
+    & .about-features__info {
+      border-radius: 2rem 0 0 2rem;
+    }
+    & .about-features__img {
+      border-radius: 0 2rem 2rem 0;
+    }
+  }
+
+  &__img {
+    border-radius: 2rem 0 0 2rem;
+    overflow: hidden;
+
+    &.real-deal {
+      order: 1;
+    }
+  }
+}
+
+.locations {
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  &__card {
+    img {
+      background: url("/project/assets/shared/desktop/bg-pattern-small-circle.svg");
+    }
+    h3 {
+      letter-spacing: 0.4rem;
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+  }
+}
+
+//992px
+@media (max-width: 47.9em) {
+  .container-md {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .separator {
+    margin-top: 10rem;
+  }
+  section.features {
+    gap: 0;
+  }
+  .about,
+  .about-features {
+    &__info {
+      padding: 5rem 6rem;
+      border-radius: 0 !important;
+    }
+    &__img {
+      order: -1 !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  .locations {
+    gap: 10rem;
+  }
+}
+
+//992px To 1200px
+@media (min-width: 47.9em) and (max-width: 75em) {
+  .about,
+  .about-features {
+    &__info {
+      border-radius: 0 0 2rem 2rem !important;
+    }
+    &__img {
+      border-radius: 2rem 2rem 0 0 !important;
+      order: -1 !important;
+    }
+  }
+
+  .locations {
+    gap: 10rem;
+  }
+}

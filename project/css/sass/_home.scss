@@ -1,0 +1,572 @@
+.header {
+  &__logo {
+    width: 18rem;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__links {
+    gap: 4.5rem;
+
+    .item {
+      font-size: 1.4rem;
+      letter-spacing: 0.2rem;
+      font-weight: 400;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.hero {
+  color: var(--white);
+  background: hsl(11, 73%, 66%) no-repeat right
+    url("/project/assets/home/desktop/bg-pattern-hero-home.svg");
+  height: 65rem;
+
+  &__first-half {
+    padding-left: 12rem;
+    padding-top: 15rem;
+
+    .title {
+      font-size: 4.8rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .desc {
+      font-size: 1.6rem;
+      width: 44rem;
+      font-weight: 400;
+    }
+  }
+
+  &__container {
+    grid-template-columns: 1fr 57rem;
+  }
+}
+
+.design {
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+
+  & a {
+    overflow: hidden;
+    cursor: pointer;
+    place-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #00000078;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+
+  & a:hover::before {
+    background-color: hsl(11deg 73% 66% / 49%);
+  }
+
+  & figure {
+    position: relative;
+    color: var(--white);
+    z-index: 3;
+
+    h2 {
+      font-size: 4.4rem;
+      text-transform: uppercase;
+    }
+    figcaption {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+      font-weight: 600;
+      gap: 3rem;
+    }
+  }
+
+  &__overlay {
+    z-index: 2;
+    background-color: #00000080;
+  }
+
+  &__web {
+    height: 75rem;
+    grid-row: span 2;
+    background: url("/project/assets/home/desktop/image-web-design-large.jpg");
+  }
+
+  &__app {
+    background: url("/project/assets/home/desktop/image-app-design.jpg");
+  }
+
+  &__graphic {
+    background: url("/project/assets/home/desktop/image-graphic-design.jpg");
+  }
+}
+
+.features {
+  grid-template-columns: repeat(3, 1fr);
+
+  &#real-deal {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  &__img {
+    margin-bottom: 3rem;
+    background: url("/project/assets/shared/desktop/bg-pattern-small-circle.svg");
+  }
+  &__title {
+    font-size: 2.2rem;
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+  &__desc {
+    max-width: 34rem;
+    margin: auto;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+}
+
+.contact,
+.web-design__hero {
+  padding: 7rem 10rem !important;
+  color: var(--white);
+  transform: translateY(8rem);
+  background: var(--peach)
+    url("/project/assets/shared/desktop/bg-pattern-call-to-action.svg")
+    no-repeat;
+  background-position: right;
+
+  &__title {
+    font-size: 4.2rem;
+    font-weight: 600;
+    width: 30rem;
+    line-height: 1;
+  }
+  &__desc {
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-width: 48rem;
+  }
+}
+
+.footer {
+  color: var(--white) !important;
+  padding: 10rem;
+
+  .item a {
+    color: var(--white) !important;
+    font-weight: 300;
+  }
+  .line {
+    height: 0.2rem;
+    margin: 0;
+    margin-bottom: 6rem;
+  }
+
+  &__info {
+    grid-template-columns: 2fr 3fr 1fr;
+
+    & ul li {
+      font-size: 1.4rem;
+      color: rgb(246 238 238 / 72%);
+    }
+    & ul:last-child li {
+      cursor: pointer;
+    }
+  }
+}
+
+//1200px To 1400px
+@media (min-width: 75em) and (max-width: 87.5em) {
+  .hero__first-half .title {
+    min-width: 50rem;
+  }
+}
+
+//max 992px
+@media (max-width: 62em) {
+  .hero {
+    background: #e88069 no-repeat 19rem 13rem
+      url(/project/assets/home/desktop/bg-pattern-hero-home.svg);
+  }
+}
+//Over 1400px
+@media (min-width: 87.5em) {
+  .leaf-pattern.features {
+    transform: translate(100vw, 194rem) rotate(180deg);
+  }
+}
+
+//small screen 767px
+@media (max-width: 47.9em) {
+  html {
+    font-size: 56.25%;
+  }
+  .py-6-mobile {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    padding-right: calc(var(--bs-gutter-x) * 2) !important;
+    padding-left: calc(var(--bs-gutter-x) * 2) !important;
+  }
+
+  .hero__container {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  section.hero {
+    display: flex;
+    justify-content: center;
+    border-radius: 0 !important;
+
+    &__first-half .title {
+      min-width: 50rem;
+    }
+  }
+
+  .header__links {
+    z-index: 9999;
+    display: none;
+    gap: 3rem;
+
+    &.active {
+      position: absolute;
+      flex-direction: column;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 25rem;
+      color: var(--white);
+      background-color: var(--dark-gray);
+      padding: 5rem;
+      justify-content: center;
+
+      .item {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  section.design {
+    gap: 5rem !important;
+
+    &__web {
+      height: 100%;
+      background: url(/project/assets/home/mobile/image-web-design.jpg);
+    }
+    &__app {
+      height: 100%;
+      background: url(/project/assets/home/mobile/image-app-design.jpg);
+    }
+    &__graphic {
+      height: 100%;
+      background: url(/project/assets/home/mobile/image-graphic-design.jpg);
+    }
+    a {
+      padding: 19rem 0;
+    }
+    figcaption {
+      font-size: 2.6rem;
+      font-weight: 500;
+      & img {
+        width: 1.2rem;
+      }
+    }
+  }
+
+  .header {
+    justify-content: space-between;
+
+    &__logo {
+      width: 25rem;
+    }
+
+    &__menu {
+      border: none;
+
+      .icon__close {
+        display: none;
+      }
+
+      &.active {
+        .icon__open {
+          display: none;
+        }
+        .icon__close {
+          display: block;
+        }
+      }
+    }
+  }
+
+  section.features {
+    gap: 10rem;
+
+    &#real-deal {
+      gap: 0 !important;
+    }
+
+    &__card {
+      flex-direction: column;
+      text-align: center;
+    }
+    & img {
+      width: 40rem;
+      background-size: cover;
+    }
+    & h3 {
+      font-size: 4rem;
+    }
+    & figcaption {
+      font-size: 3rem;
+      margin-top: 6rem;
+    }
+  }
+
+  .contact {
+    padding: 10rem 0 !important;
+
+    &__title {
+      width: 40rem;
+      line-height: 1.3;
+      font-size: 4.4rem;
+      letter-spacing: 0.2rem;
+      text-align: center;
+    }
+    &__desc {
+      font-size: 2.4rem;
+      line-height: 2;
+    }
+    .primary-btn {
+      padding: 3rem 4rem;
+      font-size: 2rem;
+    }
+  }
+
+  .footer {
+    padding: 10rem 7rem;
+
+    .header {
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__logo {
+        width: 35rem;
+      }
+
+      &__links {
+        flex-direction: column;
+        text-align: center;
+        .item {
+          font-size: 2.4rem;
+        }
+      }
+
+      &__menu {
+        border: none;
+        .icon__close {
+          display: none;
+        }
+      }
+    }
+
+    &__info {
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 7rem;
+
+      ul li {
+        font-size: 2.4rem;
+
+        &:first-child {
+          font-size: 2.8rem;
+          font-weight: 500;
+        }
+      }
+
+      & ul:last-child li img {
+        width: 4rem;
+      }
+    }
+
+    .header {
+      position: relative;
+
+      &__links {
+        padding-top: 15rem;
+      }
+      &__logo {
+        width: 30rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(238 238 238 / 9%);
+        top: 18rem;
+      }
+    }
+  }
+
+  .hero {
+    &__first-half {
+      & .title {
+        width: 70% !important;
+        padding: 1rem !important;
+        font-size: 4rem !important;
+      }
+      & .desc {
+        font-size: 2rem;
+        width: 42rem;
+      }
+    }
+  }
+}
+
+//max 1200px
+@media (max-width: 75em) {
+  .hero {
+    height: 95rem;
+    background: #e88069 no-repeat 39rem 13rem
+      url(/project/assets/home/desktop/bg-pattern-hero-home.svg);
+  }
+
+  .hero__container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__first-half {
+    padding-left: 0;
+    padding-top: 8rem;
+    z-index: 2;
+
+    & .desc {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 3rem;
+    }
+    & .title {
+      max-width: 55rem;
+      margin: auto;
+    }
+  }
+
+  .hero__second-half {
+    &-img {
+      width: 65rem;
+      transform: translateY(-8rem);
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .design {
+    &__web {
+      height: 100%;
+      background: url(/project/assets/home/tablet/image-web-design.jpg);
+    }
+    &__app {
+      height: 100%;
+      background: url(/project/assets/home/tablet/image-app-design.jpg);
+    }
+    &__graphic {
+      height: 100%;
+      background: url(/project/assets/home/tablet/image-graphic-design.jpg);
+    }
+    a {
+      padding: 7rem 0;
+    }
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+
+    &__card {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+    &__title {
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    &__desc {
+      font-weight: 400;
+      max-width: 100%;
+    }
+  }
+
+  .contact {
+    background: var(--peach)
+      url(/project/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg)
+      no-repeat;
+    flex-direction: column;
+
+    &.separator {
+      margin-top: 0;
+    }
+
+    & .col-6-md {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__desc {
+      max-width: 44rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    &__btn {
+      margin-left: 0 !important;
+    }
+  }
+
+  .footer {
+    &__info {
+      grid-template-columns: 2fr 2fr 1fr;
+    }
+  }
+
+  .header__links {
+    gap: 3rem;
+  }
+}
+
+//smallest phones
+@media (max-width: 30em) {
+  html {
+    font-size: 50%;
+  }
+  section.features {
+    gap: 8rem !important;
+
+    & img {
+      width: 30rem;
+    }
+    & h3 {
+      font-size: 3rem;
+    }
+    & figcaption {
+      font-size: 2rem;
+    }
+  }
+}

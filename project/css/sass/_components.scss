@@ -1,0 +1,38 @@
+.primary-btn {
+  display: inline-block;
+  padding: 1.8rem 2.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: 0.4s all ease-in-out;
+  color: var(--black) !important;
+  background-color: var(--white);
+
+  &:hover {
+    color: var(--white) !important;
+    background-color: var(--light-peach);
+  }
+}
+.secondary-btn {
+  display: inline-block;
+  padding: 1.8rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: 0.4s all ease-in-out;
+  letter-spacing: 0.2rem;
+  color: var(--white) !important;
+  background-color: var(--peach);
+
+  &:hover {
+    color: var(--white) !important;
+    background-color: var(--light-peach);
+  }
+}
+.leaf-pattern {
+  position: absolute;
+  transform: translate(-20rem, 30rem) rotateY(10deg);
+  z-index: -1;
+}
+.leaf-pattern.features {
+  transform: translate(110vw, 194rem) rotate(180deg);
+  transform-origin: left;
+}

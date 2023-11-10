@@ -1,0 +1,92 @@
+//Some style are extends from contact.scss
+.web-design,
+.graphic-design,
+.app-design {
+  grid-template-rows: 1fr !important;
+
+  &-card:hover &-info {
+    background-color: var(--peach);
+    color: var(--white);
+
+    & h3 {
+      transition: 0.3s all ease-in-out;
+      color: var(--white);
+    }
+  }
+
+  &__hero {
+    transform: translateY(0);
+
+    &__desc {
+      max-width: 40rem;
+    }
+  }
+
+  &-pages {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  &-info {
+    background-color: var(--very-light-peach);
+    padding: 4rem 5rem;
+    transition: 0.3s all ease-in-out;
+
+    h3 {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.3rem;
+      color: var(--peach);
+    }
+
+    figcaption {
+      font-size: 1.6rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+  }
+
+  & a {
+    height: 40rem;
+  }
+
+  & figure {
+    font-size: 50%;
+    overflow: initial;
+  }
+}
+
+//big laptop
+@media (min-width: 75em) {
+  .web-design,
+  .app-design,
+  .graphic-design {
+    &-info {
+      height: 100%;
+    }
+  }
+}
+//small laptop
+@media (min-width: 47.9em) and (max-width: 75em) {
+  .web-design,
+  .app-design,
+  .graphic-design {
+    &-info {
+      justify-content: center;
+    }
+  }
+}
+//phone screen
+@media (max-width: 47.9em) {
+  .web-design,
+  .app-design,
+  .graphic-design {
+    &__hero.rounded-5 {
+      border-radius: 0 !important;
+    }
+
+    &-card {
+      flex-direction: column;
+    }
+  }
+}

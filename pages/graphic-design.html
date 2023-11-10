@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>graphic-design page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../project/assets/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <main class="position-relative">
+      <header
+        class="container-sm header d-flex py-6 py-6-mobile align-items-center"
+      >
+        <a href="../index.html">
+          <div class="header__logo">
+            <img
+              src="../../project/assets/shared/desktop/logo-dark.png"
+              alt="header logo"
+            />
+          </div>
+        </a>
+        <button class="header__menu d-sm-flex d-md-none">
+          <img
+            class="icon__open"
+            src="../../project/assets/shared/mobile/icon-hamburger.svg"
+            alt="Open icon"
+          />
+          <img
+            class="icon__close"
+            src="../../project/assets/shared/mobile/icon-close.svg"
+            alt="Close icon"
+          />
+        </button>
+        <ul class="header__links d-md-flex mb-0 ms-auto">
+          <li class="item"><a href="about.html">OUR COMPANY</a></li>
+          <li class="item"><a href="locations.html">LOCATIONS</a></li>
+          <li class="item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </header>
+    </main>
+
+    <section
+      class="web-design__hero container-md d-flex justify-content-center text-center align-items-center rounded-0-sm rounded-5"
+    >
+      <div class="col-6-md d-flex flex-column align-items-center">
+        <h2 class="web-design__hero__title">Graphic Design</h2>
+        <p class="web-design__hero__desc">
+          We deliver eye-catching branding materials that are tailored to meet
+          your business objectives.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="container-sm d-flex flex-column d-xl-grid graphic-design-pages separator"
+    >
+      <figure
+        class="graphic-design-card d-flex d-xl-block rounded-5 overflow-hidden"
+      >
+        <div>
+          <img
+            class="w-100 overflow-hidden"
+            src="/project/assets/graphic-design/desktop/image-change.jpg"
+            alt="card image"
+          />
+        </div>
+        <div class="graphic-design-info d-flex align-items-center flex-column">
+          <h3>AIRFILTER</h3>
+          <figcaption>
+            Solving the problem of poor indoor air quality by filtering the air
+          </figcaption>
+        </div>
+      </figure>
+      <figure
+        class="graphic-design-card d-flex d-xl-block rounded-5 overflow-hidden"
+      >
+        <div>
+          <img
+            class="w-100 overflow-hidden"
+            src="/project/assets/graphic-design/desktop/image-boxed-water.jpg"
+            alt="card image"
+          />
+        </div>
+        <div class="graphic-design-info d-flex align-items-center flex-column">
+          <h3>EYECAM</h3>
+          <figcaption>
+            Product that lets you edit your favorite photos and videos at any
+            time
+          </figcaption>
+        </div>
+      </figure>
+      <figure
+        class="graphic-design-card d-flex d-xl-block rounded-5 overflow-hidden"
+      >
+        <div>
+          <img
+            class="w-100 overflow-hidden"
+            src="/project/assets/graphic-design/desktop/image-science.jpg"
+            alt="card image"
+          />
+        </div>
+        <div class="graphic-design-info d-flex align-items-center flex-column">
+          <h3>FACEIT</h3>
+          <figcaption>
+            Get to meet your favorite internet superstar with the faceit app
+            effects
+          </figcaption>
+        </div>
+      </figure>
+    </section>
+
+    <section
+      class="design graphic-design container-sm d-flex flex-column d-xl-grid column-gap-4 row-gap-4 separator"
+    >
+      <a
+        href="app-design.html"
+        class="design__app d-grid gap-5 text-center rounded-5 position-relative"
+      >
+        <figure class="d-flex flex-column gap-5">
+          <h2>App Design</h2>
+          <figcaption class="d-flex justify-content-center align-items-center">
+            View Projects
+            <img
+              src="/project/assets/shared/desktop/icon-right-arrow.svg"
+              alt="icon right"
+            />
+          </figcaption>
+        </figure>
+      </a>
+
+      <a
+        href="web-design.html"
+        class="design__graphic d-grid gap-5 text-center rounded-5 position-relative"
+      >
+        <figure class="d-flex flex-column gap-5">
+          <h2>Web Design</h2>
+          <figcaption class="d-flex justify-content-center align-items-center">
+            View Projects
+            <img
+              src="/project/assets/shared/desktop/icon-right-arrow.svg"
+              alt="icon right"
+            />
+          </figcaption>
+        </figure>
+      </a>
+    </section>
+
+    <!-- footer component -->
+    <section class="contact container-sm d-flex align-items-center rounded-5">
+      <div class="col-6-md">
+        <h2 class="contact__title">Let’s talk about your project</h2>
+        <p class="contact__desc">
+          Ready to take it to the next level? Contact us today and find out how
+          our expertise can help your business grow.
+        </p>
+      </div>
+      <div class="contact__btn col-6-md ms-xl-auto">
+        <a
+          class="primary-btn rounded-4 text-uppercase"
+          href="pages/contact.html"
+          >Get in touch</a
+        >
+      </div>
+    </section>
+    <footer class="footer bg-dark">
+      <div class="container">
+        <header class="header d-flex py-6 align-items-center">
+          <a href="/index.html">
+            <div class="header__logo">
+              <img
+                src="../../project/assets/shared/desktop/logo-light.png"
+                alt="header logo"
+              />
+            </div>
+          </a>
+          <ul class="header__links footer__links d-flex mb-0 ms-md-auto">
+            <li class="item"><a href="about.html">OUR COMPANY</a></li>
+            <li class="item"><a href="locations.html">LOCATIONS</a></li>
+            <li class="item"><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </header>
+
+        <hr class="bg-white w-100 d-none d-md-block line" />
+
+        <div class="footer__info d-flex d-md-grid mb-sm-5">
+          <ul class="d-flex flex-column gap-1 p-0 m-0">
+            <li>Designo Central Office</li>
+            <li>3886 Wellington Street</li>
+            <li>Toronto, Ontario M9C 3J5</li>
+          </ul>
+          <ul class="d-flex flex-column gap-1 p-0 m-0">
+            <li>Contact Us (Central Office)</li>
+            <li>P : +1 253-863-8967</li>
+            <li>M : contact@designo.com</li>
+          </ul>
+          <ul class="d-flex justify-content-end align-items-end gap-4 p-0 m-0">
+            <li>
+              <img
+                src="../../project/assets/shared/desktop/icon-facebook.svg"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="../../project/assets/shared/desktop/icon-youtube.svg"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="../../project/assets/shared/desktop/icon-twitter.svg"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="../../project/assets/shared/desktop/icon-pinterest.svg"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="../../project/assets/shared/desktop/icon-instagram.svg"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
